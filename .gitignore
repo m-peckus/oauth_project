@@ -1,1 +1,2 @@
-.env # Contains sensitive authentication keys
+.env 
+# Contains sensitive authentication keys
