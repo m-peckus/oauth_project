@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Plaid Sandbox Connect</title>
+        <script
+    src="https://cdn.plaid.com/link/v2/stable/link-initialize.js">
+    </script>
+    </head>
+    <body>
+        <h2>Connect Your Bank (Sandbox)</h2>
+        <button id="link-button">Connect Bank</button>
+
+        <script>
+            const linkToken = "link-sandbox-68c0801b-6199-4d71-9d31-93a26fdb5867"; // Replace with actual token or inject dinamically
+
+            const handler = Plaid.create({
+                token: linkToken,
+                onSuccess: function(public_token, metadata) {
+                    alert("Success! Public token: " + public_token)
+                    // send public_token to your Flask backend to exchange it for access_token
+                },
+                onExit: function(err, metadata) {
+                    console.log("User exited:", err, metadata);
+                }
+            });
+
+            document.getElementById("link-button").onclick = function() {
+                handler.open();
+            };
+        </script>
+    </body>
+</html>
