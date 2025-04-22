@@ -45,7 +45,7 @@ pip install flask python-dotenv requests
 4. Run the application  
 python app.py
 
-5. Access the app open your browser at  
+5. To access the app open your browser at  
    http://localhost:5000
 
 OAuth Flow Summary
