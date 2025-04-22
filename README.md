@@ -21,9 +21,9 @@ It recreates how third-party applications can securely access user financial dat
 
 ## Project Structure
 
-. 
+.   
 ├── app.py # Flask app with both endpoints   
-├── .env   # Plaid credentials (not shared)   
+├── .env   # Plaid API credentials (not shared)   
 ├── templates/   
 │   └── index.html # Simple HTML frontend  
 
