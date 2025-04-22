@@ -10,7 +10,7 @@ PLAID_CLIENT_ID = os.getenv("PLAID_CLIENT_ID")
 PLAID_SECRET = os.getenv("PLAID_SECRET")
 
 # Replace this with the public token you got from the frontend
-public_token = "public-sandbox-50ede66a-1e7c-4919-a96f-58bd906b367e"
+public_token = "public-sandbox-a6446367-7eb6-4025-932f-788b84e630b3"
 
 url = "https://sandbox.plaid.com/item/public_token/exchange"
 payload = {

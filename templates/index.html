@@ -11,13 +11,24 @@
         <button id="link-button">Connect Bank</button>
 
         <script>
-            const linkToken = "link-sandbox-68c0801b-6199-4d71-9d31-93a26fdb5867"; // Replace with actual token or inject dinamically
+            const linkToken = "{{ link_token }}"; // Replace with actual token or inject dinamically
 
             const handler = Plaid.create({
                 token: linkToken,
                 onSuccess: function(public_token, metadata) {
                     alert("Success! Public token: " + public_token)
-                    // send public_token to your Flask backend to exchange it for access_token
+
+                    // Send public token to backend
+                    fetch("/get_access_token", {
+                        method: "POST",
+                        headers: {"Content-Type": "application/json"},
+                        body: JSON.stringify({public_token: public_token})
+                    })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log("Access token response:", data);
+                        alert("Access Token: " + data.access_token); 
+                    });
                 },
                 onExit: function(err, metadata) {
                     console.log("User exited:", err, metadata);
