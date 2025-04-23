@@ -36,7 +36,7 @@ It recreates how third-party applications can securely access user financial dat
 
 2. Create a .env file with your credentials
 
-PLAID_CLIENT_ID=your_client_id
+PLAID_CLIENT_ID=your_client_id  
 PLAID_SECRET=your_sandbox_secret
 
 4. Install dependencies  
