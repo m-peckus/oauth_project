@@ -23,9 +23,12 @@ It recreates how third-party applications can securely access user financial dat
 
 .   
 ├── app.py # Flask app with both endpoints   
-├── .env   # Plaid API credentials (not shared)   
+├── .env   # Plaid API credentials (not shared)  
+├── requirements.txt # Project dependencies     
 ├── templates/   
 │   └── index.html # Simple HTML frontend  
+│── static/   
+│   └── favicon.png # Favicon file
 
 ## Setup Instructions
 
