@@ -1,5 +1,7 @@
 # Plaid OAuth Flow Demo (Sandbox)
 
+![App Demo](Plaid-OAuth.mp4)
+
 This project is a compact Flask web application that demonstrates the OAuth-style token exchange workflow using the [Plaid API](https://plaid.com/).   
 It recreates how third-party applications can securely access user financial data without handling or storing user credentials directly.
 
@@ -49,7 +51,9 @@ pip install flask python-dotenv requests
 python app.py
 
 5. To access the app open your browser at  
-   http://localhost:5000
+   http://localhost:5000  
+
+Project is deployed live at the following URL: https://plaid-sandbox-oauth.onrender.com  
 
 OAuth Flow Summary
 
